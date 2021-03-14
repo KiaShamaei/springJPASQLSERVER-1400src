@@ -57,6 +57,6 @@ public class EmployeeController {
     
     @GetMapping("/search")
 	public List<Employee> search(@RequestParam(value="searchword") String searchword){
-		return employeeService.search(searchword);
+		return employeeService.search(searchword );
 	}
 }

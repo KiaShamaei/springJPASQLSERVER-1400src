@@ -67,7 +67,7 @@ public class EmployeeService {
 	}
 
 	public List<Employee> search(String searchword) {
-		return employeeRepository.findByFirstName(searchword);
+		return employeeRepository.findEmployee(searchword);
 		
 	}
 	

@@ -5,10 +5,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.NamedNativeQueries;
 
 @Entity
 @Table(name="employee")
+@NamedQueries({
+	@NamedQuery(name= "Employee.findEmployee" , query = "SELECT e FROM Employee  e WHERE LOWER (e.firstName) LIKE LOWER (:searchword) OR LOWER (e.lastName) LIKE LOWER (:searchword) ")
+})
 public class Employee {
 @Id
 @GeneratedValue(strategy= GenerationType.IDENTITY)
