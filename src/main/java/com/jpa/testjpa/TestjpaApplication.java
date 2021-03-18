@@ -11,14 +11,14 @@ public class TestjpaApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TestjpaApplication.class, args);
 	}
-	@Bean(name = "dataSource")
-	public DriverManagerDataSource dataSource() {
-	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
-	    driverManagerDataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
-	    driverManagerDataSource.setUrl("jdbc:oracle:thin:@localhost:1521:xe");
-	    driverManagerDataSource.setUsername("ZSS");
-	    driverManagerDataSource.setPassword("12");
-	    return driverManagerDataSource;
-	}
+//	@Bean(name = "dataSource")
+//	public DriverManagerDataSource dataSource() {
+//	    DriverManagerDataSource driverManagerDataSource = new DriverManagerDataSource();
+//	    driverManagerDataSource.setDriverClassName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+//	    driverManagerDataSource.setUrl("jdbc:sqlserver://localhost;databaseName=test");
+//	    driverManagerDataSource.setUsername("sa");
+//	    driverManagerDataSource.setPassword("kia852147154@KM");
+//	    return driverManagerDataSource;
+//	}
 
 }
